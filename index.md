@@ -1,1 +1,1 @@
-- [java](java/%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9D%99%E6%80%81IP%E5%92%8C%E8%BF%9E%E6%8E%A5%E5%A4%96%E7%BD%91.md)
+- [java](https://github.com/xxxxxxxqqqqqqq/xxxxxxxqqqqqqq.github.io/blob/master/java/%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9D%99%E6%80%81IP%E5%92%8C%E8%BF%9E%E6%8E%A5%E5%A4%96%E7%BD%91.md)
