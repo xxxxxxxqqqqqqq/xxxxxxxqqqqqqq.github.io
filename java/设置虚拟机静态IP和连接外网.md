@@ -2,7 +2,7 @@
 
 1. 主机设置：网络连接 ``VMware Network Adapter VMnet8`` -> ``IPV4`` 属性设置 -> 如下图
 
-![image-20200623135744519](C:\Users\Administrator\Desktop\blog\java\设置虚拟机静态IP和连接外网.assets\image-20200623135744519.png)
+![image-20200623135744519](设置虚拟机静态IP和连接外网.assets\image-20200623135744519.png)
 
 ``注：此处的C类IP地址，不一定非要与主机相同，即192.168.XXX.XXX均可。建议IP使用.1,网关使用.2,方便记忆`` 
 
@@ -12,7 +12,7 @@
 * 子网IP与主机保持在同一C类IP之下，子网掩码一致。
 * ``NET设置`` 网关IP与主机一致1
 
-![image-20200623141326706](C:\Users\Administrator\Desktop\blog\java\设置虚拟机静态IP和连接外网.assets\image-20200623141326706.png)
+![image-20200623141326706](设置虚拟机静态IP和连接外网.assets\image-20200623141326706.png)
 
 3. ``CentOS 7`` 设置
 
@@ -56,7 +56,7 @@
    2. 如果发现ping外网不通，但ping外网的IP是通的，则是DNS配置问题。一种解决方案如上，DNS1和DNS2；另一种方案修改/etc/resolv.conf，添加nameserver。
    ```
 
-![image-20200623143655508](C:\Users\Administrator\Desktop\blog\java\设置虚拟机静态IP和连接外网.assets\image-20200623143655508.png)
+![image-20200623143655508](设置虚拟机静态IP和连接外网.assets/image-20200623143655508.png)
 
 * 重启网络服务，查看配置结果。参考指令如下：
 
