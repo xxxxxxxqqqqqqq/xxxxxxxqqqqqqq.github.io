@@ -1,0 +1,46 @@
+# how to use Shadowsocks by docker?
+
+#安装docker
+
+利用阿里云镜像一键安装：
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+
+一键安装脚本
+curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
+
+docker容器基本操作：
+#查看正在运行的容器
+docker ps
+#查看所有容器（包括停止的）
+docker ps -a
+#关闭、启动、重启、删除容器
+docker stop ssserver
+docker start ssserver
+docker restart ssserver
+docker rm ssserver
+
+
+
+
+
+#拉取Shadowsocks镜像并运行
+
+这里使用dockerhub上的镜像，建议访问该网站参考更多内容：
+
+镜像地址：https://hub.docker.com/r/mritd/shadowsocks
+
+
+拉取镜像并运行：
+docker run -dt --name ssserver -p 6443:6443 -p 6500:6500/udp mritd/shadowsocks -m "ss-server" -s "-s 0.0.0.0 -p 6443 -m chacha20 -k test123 --fast-open" -x -e "kcpserver" -k "-t 127.0.0.1:6443 -l :6500 -mode fast2"
+
+kcp加速版：
+docker run -dt --name ss -p 6443:6443 -p 6500:6500/udp -e SS_CONFIG="-s 0.0.0.0 -p 6443 -m chacha20 -k test123 --fast-open" -e KCP_MODULE="kcpserver" -e KCP_CONFIG="-t 127.0.0.1:6443 -l :6500 -mode fast2" -e KCP_FLAG="true" mritd/shadowsocks
+
+参数说明：
+
+-p 6443:6443 端口号为6443，可以自定义，例如-p 8382:6443
+-m chacha20 指定协议为chacha20
+-k test123 指定密码为test123,可以自定义
+
+注：服务器开放端口；加密方式：chacha20
+
